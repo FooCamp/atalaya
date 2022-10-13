@@ -1,9 +1,6 @@
 // Change this breakpoints for the ones needed in the design
 $breakpoints: (
-  'sm': 576px,
-  'md': 768px,
-  'lg': 992px,
-  'xl': 1200px,
+  'lg': 1440px,
 ) !default;
 
 @mixin breakpoint($breakpoint) {
