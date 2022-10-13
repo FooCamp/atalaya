@@ -18,6 +18,9 @@ $max-width-desktop: 129rem;
 
   @include breakpoint(lg) {
     @include container-desktop;
+
+    column-gap: $gutter-grid-desktop;
+    grid-template-columns: repeat(12, 1fr);
   }
 }
 
