@@ -1,4 +1,5 @@
 *.md
 *.json
+*.hbs
 build
 static
