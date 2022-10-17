@@ -1,12 +1,11 @@
-export const header = () => {
-  // eslint-disable-next-line no-console
-  console.log('HEADER JS')
-  const burgerMenu = document.getElementById('burger-menu')
+import { BURGUER_MENU, MENU, CLOSE, OVERLAY } from './constants'
 
-  const overlay = document.getElementById('menu')
+export const header = () => {
+  const burgerMenu = document.getElementById(BURGUER_MENU)
+  const overlay = document.getElementById(MENU)
 
   burgerMenu.addEventListener('click', function () {
-    this.classList.toggle('close')
-    overlay.classList.toggle('overlay')
+    this.classList.toggle(CLOSE)
+    overlay.classList.toggle(OVERLAY)
   })
 }
