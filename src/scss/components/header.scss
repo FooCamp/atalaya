@@ -1,0 +1,168 @@
+$header-height: 80px;
+
+.header {
+  align-items: center;
+  border-bottom: solid 1px var(--pale-pink);
+  display: flex;
+  height: $header-height;
+  justify-content: flex-end;
+  width: 100%;
+  @include container-desktop;
+
+  &-enlacehome {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: $header-height;
+    width: 33%;
+  }
+
+  &-logo {
+    height: auto;
+    width: 200px;
+  }
+
+  &-enlaces {
+    display: flex;
+    height: $header-height;
+    width: 100%;
+  }
+
+  .enlace {
+    align-items: center;
+    color: var(--space-blue);
+    display: flex;
+    flex: 1;
+    font-family: var(--font-worksans);
+    font-size: 16px;
+    font-weight: 400;
+    height: $header-height;
+    justify-content: center;
+    line-height: 24px;
+    text-align: center;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  #burger-menu {
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    margin: 50px;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
+
+    @include breakpoint('md') {
+      display: none;
+    }
+
+    // THE LINES
+    span,
+    span::before,
+    span::after {
+      background: #fff;
+      display: block;
+      height: 2px;
+      opacity: 1;
+      position: absolute;
+      transition: 0.3s ease-in-out;
+    }
+
+    span::before,
+    span::after {
+      content: '';
+    }
+
+    // TOP
+    span::before {
+      left: 0;
+      top: -10px;
+      width: 27px;
+    }
+
+    // MIDDLE
+    span {
+      right: 0;
+      top: 13px;
+      width: 27px;
+    }
+
+    // BOTTOM
+    span::after {
+      left: 0;
+      top: 10px;
+      width: 27px;
+    }
+
+    // ROTATION ON CLICK
+    &.close {
+      // TOP
+      span::before {
+        top: 0;
+        transform: rotate(90deg);
+        width: 27px;
+      }
+
+      // MIDDLE
+      span {
+        transform: rotate(-45deg);
+        top: 13px;
+        width: 27px;
+      }
+
+      // BOTTOM
+      span::after {
+        top: 0;
+        left: 0;
+        transform: rotate(90deg);
+        opacity: 0;
+        width: 0;
+      }
+    }
+  }
+
+  #menu {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+
+    @include breakpoint('md') {
+      display: block;
+      position: relative;
+      height: $header-height;
+      top: unset;
+      opacity: 1;
+      visibility: visible;
+      padding: 0;
+      width: 33%;
+      min-width: auto;
+      min-height: $header-height;
+    }
+
+    &.overlay {
+      visibility: visible;
+      opacity: 1;
+      padding-top: 100px;
+      background: rgb(0 0 0 / 50%);
+    }
+
+    ul {
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+  }
+}

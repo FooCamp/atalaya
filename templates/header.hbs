@@ -1,6 +1,13 @@
-<header>
-  <a href={{enlaceHome}}>
-    <img src='{{assetSrc logo}}' alt='{{assetTitle logo}}' />
+<header class="header">
+  <a href={{enlaceHome}} class="header-enlacehome">
+    <img src='{{assetSrc logo}}' alt='{{assetTitle logo}}' class="header-logo"/>
   </a>
-  <ul>{{#each enlacesHeader}}{{{module this}}}{{/each}}</ul>
+	<div id="burger-menu">
+		<span></span>
+	</div>
+	<div id="menu">
+		<ul class="header-enlaces">
+			{{#each enlacesHeader}}{{{module this}}}{{/each}}
+		</ul>
+	</div>
 </header>
