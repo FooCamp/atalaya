@@ -19,9 +19,14 @@
 
 .burger-menu {
   align-content: center;
-  background-color: var(--space-blue);
-  width: 1.8rem;
-  height: 1.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0.6rem 0.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
 }
 
 .header-enlaces {
@@ -36,7 +41,48 @@
   color: var(--space-blue);
 }
 
-@media (min-width: 1440px) {
+// Styles for menu modal
+.menu-mobile {
+  z-index: 1;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--white);
+}
+
+.menu-mobile .close-button {
+  width: 2.4rem;
+  height: 2.4rem;
+  position: absolute;
+  right: 2.4rem;
+  top: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-mobile .header-enlaces {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.menu-mobile .header-enlaces .divider:not(:last-child) {
+  width: 15.6rem;
+  border-top: 0.1rem solid var(--pale-purple);
+}
+
+@include breakpoint('lg') {
   .header {
     margin: 1.6rem 6rem 0;
     padding-bottom: 2.4rem;
