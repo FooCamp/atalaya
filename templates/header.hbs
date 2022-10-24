@@ -1,6 +1,6 @@
 <header class="header">
 	<a href={{enlaceHome}} class="header-enlacehome">
-		<img src='{{assetSrc logo}}' alt='{{assetTitle logo}}' class="header-logo" />
+		<img src='{{assetSrc logo}}' alt='{{assetTitle logo}}' class="header__logo" />
 	</a>
 	<div class="burger-menu" id="burger-menu">
 		<svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -10,7 +10,7 @@
 		</svg>
 	</div>
 	<div class="menu" id="menu">
-		<ul class="header-enlaces">
+		<ul class="header__enlaces">
 			{{#each enlacesHeader}}
 			<li>{{{module this}}}</li>
 			{{/each}}
@@ -24,7 +24,7 @@
 					fill="#212966" />
 			</svg>
 		</div>
-		<ul class="header-enlaces">
+		<ul class="header__enlaces menu-mobile__enlaces">
 			{{#each enlacesHeader}}
 			<li>{{{module this}}}</li>
 			<span class="divider"></span>
