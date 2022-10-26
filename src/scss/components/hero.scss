@@ -1,0 +1,110 @@
+.hero {
+  width: 100vw;
+  height: 71.7rem; // 759px - 42cpx del header
+  background-color: var(--pastel-pink); // #fcfaf6
+  font-family: var(--font-playfair-display);
+  color: var(--space-blue);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__icon {
+    width: 12.4rem;
+    height: 7.2rem;
+    margin-top: 6rem;
+    margin-bottom: 2.4rem;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 4.3rem;
+    text-align: center;
+    margin: 0 1.6rem;
+    letter-spacing: -1;
+  }
+
+  h1:nth-child(2) {
+    width: 30rem;
+  }
+
+  img {
+    position: absolute;
+    width: auto;
+    height: auto;
+  }
+
+  .hero &__image--1 {
+    height: 10.2rem;
+    top: 7.5rem;
+    left: -1.2rem;
+  }
+
+  .hero &__image--2 {
+    height: 11rem;
+    width: 7.6rem;
+    object-fit: cover;
+    object-position: left;
+    top: 0;
+    right: 0;
+  }
+
+  .hero &__image--3 {
+    height: 11.3rem;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__line {
+    height: 6rem;
+    border-right: 1px var(--space-blue) solid;
+    margin-top: 3.2rem;
+  }
+}
+
+@include breakpoint('lg') {
+  .hero {
+    height: 77.4rem;
+
+    &__icon {
+      width: 25.8rem;
+      height: 13.8rem;
+      margin-bottom: 3.2rem;
+    }
+
+    h1 {
+      width: 86.8rem;
+      font-size: 4.8rem;
+      line-height: 7rem;
+    }
+
+    h1:nth-child(2) {
+      width: inherit;
+    }
+
+    .hero &__image--1 {
+      height: 26.689rem;
+      top: 8.33rem;
+      left: 0;
+    }
+
+    .hero &__image--2 {
+      height: 20rem;
+      width: auto;
+      top: 0;
+      right: 24rem;
+    }
+
+    .hero &__image--3 {
+      height: 28.7rem;
+      bottom: 0;
+      right: 0;
+    }
+
+    &__line {
+      height: 5.6rem;
+    }
+  }
+}
