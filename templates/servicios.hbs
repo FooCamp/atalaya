@@ -1,7 +1,13 @@
-<section>
-	<h2>{{titulo}}</h2>
-	<p>{{descripcion}}</p>
-	{{#each card}}
-		<div>{{{module this}}}</div>
-	{{/each}}
+<section class="servicios" >
+	<h2 class="tituloservicios">{{titulo}}</h2>
+  <div class="phrase">
+    <hr class="solidfirst">
+    <p class="descripcion">{{descripcion}}</p>
+    <hr class="solidsecond">
+  </div>
+	<div class="divsevicios">
+    {{#each card}}
+      <div >{{{module this}}}</div>
+    {{/each}}
+  </div>
 </section>
