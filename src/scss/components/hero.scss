@@ -20,7 +20,10 @@
   }
 }
 
-img {
+.logo1,
+.hero-detail-1,
+.hero-detail-2,
+.hero-detail-3 {
   position: absolute;
   width: auto;
   height: auto;
@@ -51,14 +54,14 @@ img {
   margin: 0 auto;
 }
 
-.hero1 {
+.hero-detail-1 {
   position: absolute;
   height: 10.2rem;
   top: 7.5rem;
   left: -1.2rem;
 }
 
-.hero2 {
+.hero-detail-2 {
   position: absolute;
   width: 7.6rem;
   height: 111px;
@@ -68,7 +71,7 @@ img {
   object-position: left;
 }
 
-.hero3 {
+.hero-detail-3 {
   position: absolute;
   width: 113.66px;
   height: 127.72px;
@@ -107,17 +110,17 @@ img {
       height: auto;
     }
 
-    .hero1 {
+    .hero-detail-1 {
       top: 8rem;
       left: 0;
     }
 
-    .hero2 {
+    .hero-detail-2 {
       right: 24rem;
       top: 0;
     }
 
-    .hero3 {
+    .hero-detail-3 {
       bottom: 0;
       right: 0;
     }
