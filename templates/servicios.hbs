@@ -1,7 +1,9 @@
-<section>
-	<h2>{{titulo}}</h2>
-	<p>{{descripcion}}</p>
-	{{#each card}}
+<section class="servicios">
+	<h2 class="servicios__titulo">{{titulo}}</h2>
+	<p class="servicios__descripcion">{{descripcion}}</p>
+	<div class="servicios__cards-container">
+		{{#each card}}
 		<div>{{{module this}}}</div>
-	{{/each}}
+		{{/each}}
+	</div>
 </section>
