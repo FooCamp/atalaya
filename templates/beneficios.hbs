@@ -1,10 +1,12 @@
-<section>
-	<h4>{{titulo}}</h4>
+<section class="beneficios">
 	<img src='{{assetSrc imagen}}' alt='{{assetTitle imagen}}'>
-	<ul>
-		{{#each listadoBeneficios}}
-			<div>{{{module this}}}</div>
-		{{/each}}
-	</ul>
-	<a href={{enlace}}>{{textoEnlace}}</a>
+	<div>
+		<h4>{{titulo}}</h4>
+		<ul class="listado">
+			{{#each listadoBeneficios}}
+			<div class="listado__beneficio">{{{module this}}}</div>
+			{{/each}}
+		</ul>
+		<a href={{enlace}}>{{textoEnlace}}</a>
+	</div>
 </section>
