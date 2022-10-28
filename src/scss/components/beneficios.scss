@@ -1,7 +1,10 @@
 .beneficios {
-  margin: 4rem 1.6rem 5.6rem;
+  max-width: 60rem;
+  margin: 4rem auto 5.6rem;
+  padding: 0 1.6rem;
   display: flex;
   flex-direction: column-reverse;
+  align-items: center;
   color: var(--space-blue);
 
   > div {
@@ -19,6 +22,7 @@
 
   img {
     margin-top: 2.4rem;
+    max-width: 42.3rem;
   }
 
   .listado {
@@ -78,7 +82,6 @@
     gap: 3rem;
 
     img {
-      width: 42.3rem;
       margin: 0;
     }
 
