@@ -1,0 +1,75 @@
+h4 {
+  font-family: var(--font-playfair-display);
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  letter-spacing: 0;
+  text-align: left;
+  color: #212966;
+}
+
+.proceeds {
+  .module {
+    background: #e6f2ff;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #21295c;
+    padding: 12px 24px;
+    margin: 27px 0;
+
+    h5 {
+      font-size: 16px;
+      line-height: 24%;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+}
+
+.purchase {
+  background: #ffb5a7;
+  border-radius: 24px;
+  font-size: 16px;
+  padding: 8px 24px;
+}
+
+#experience {
+  margin: 80px 0;
+
+  .container-general {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-flow: column-reverse;
+    @include breakpoint('md') {
+      flex-flow: wrap;
+    }
+  }
+}
+
+.experience-imagen {
+  width: 100%;
+  text-align: right;
+  padding: 0 20px;
+
+  img {
+    margin-top: 5%;
+  }
+  @include breakpoint('md') {
+    width: 40%;
+  }
+}
+
+.experience-text {
+  font-size: 16px;
+  width: 100%;
+  @include breakpoint('md') {
+    width: 60%;
+    font-size: 32px;
+    padding: 20px 15px;
+  }
+}
