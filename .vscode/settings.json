@@ -51,7 +51,7 @@
   "editor.linkedEditing": true,
   "vetur.validation.template": false,
   "diffEditor.ignoreTrimWhitespace": false,
-	"window.zoomLevel": 1,
+	"window.zoomLevel": 0,
 	"css.validate": false,
 	"scss.validate": false
 }
