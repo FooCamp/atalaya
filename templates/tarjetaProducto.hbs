@@ -1,0 +1,19 @@
+<div class="tarjeta-producto">
+  {{#if tipoTarjeta}}
+    <a href='{{enlaceProucto}}' class="tarjeta-producto__enlace">
+  {{/if}}
+      <img class="tarjeta-producto__imagen" src="{{assetSrc imagenProducto}}" alt="">
+    {{#if tipoTarjeta}}
+      <h3 class="tarjeta-producto__nombre">{{nombreProducto}}</h3>
+    {{else}}
+      <div class="precio-producto">
+        <p class="precio-producto__label">{{labelPrecio}}</p>
+    {{/if}}
+        <h3 class="precio-producto__precio">{{precioProducto}}</h3>
+    {{#unless tipoTarjeta}}
+      </div>
+    {{/unless}}
+  {{#if tipoTarjeta}}
+    </a>
+  {{/if}}
+</div>
