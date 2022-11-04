@@ -1,10 +1,10 @@
-#content-special-kit {
+.content-special-kit {
   background-image: var(--fondo-sk);
   background-size: cover;
   background-position: right;
 }
 
-#group-tarjetas {
+.group-tarjetas {
   display: grid;
   justify-content: center;
 }
@@ -13,7 +13,7 @@
   margin-bottom: 30px;
 }
 
-h2 {
+.titulo-sk {
   font-family: var(--font-playfair-display);
   font-weight: 600;
   font-size: 2.2rem;
@@ -25,7 +25,7 @@ h2 {
   padding-top: 3rem;
 }
 
-p {
+.texto-sk {
   font-weight: 400;
   font-size: 1.5rem;
   text-align: center;
@@ -37,20 +37,20 @@ p {
 }
 
 @include breakpoint('lg') {
-  h2 {
+  .titulo-sk {
     font-size: 2.4rem;
     line-height: 3.6rem;
   }
 
-  p {
+  .texto-sk {
     line-height: 2.3rem;
     width: inherit;
-    margin: 0 15%;
+    margin: 0 16%;
     padding-bottom: 1.5rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
-  #group-tarjetas {
+  .group-tarjetas {
     display: flex;
     margin: 0 7rem;
   }
