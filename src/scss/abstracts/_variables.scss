@@ -1,6 +1,27 @@
 // Add the color palette according to the site design
 :root {
+  // Main Palette
+  --alice-blue: #e6f2ff;
+  --baby-blue: #f2f8ff;
   --black: #000;
-  --red: #e60012;
+  --melon: #ffb5a7;
+  --pale-pink: #fcd5ce;
+  --pale-purple: #bcc0da;
+  --pastel-pink: #fff7f4;
+  --purple: #5b6cd8;
+  --space-blue: #21295c;
   --white: #fff;
+
+  // Complementary
+  --atalaya-mint: #9ff6dc;
+  --cotton-candy: #fdbef5;
+  --french-sky-blue: #8cbdf6;
+  --green-apple: #aee197;
+  --jasmine: #ffe792;
+  --muave: #caafff;
+  --vivid-tangerine: #f8a093;
+
+  // Font Family
+  --font-playfair-display: 'Playfair Display', serif;
+  --font-worksans: 'Work Sans', sans-serif;
 }
