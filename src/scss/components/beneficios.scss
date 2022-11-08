@@ -1,9 +1,12 @@
-.experience-container {
+.experience {
   @include container-desktop;
+}
 
+.experience-container {
   margin: 40px 16px;
   display: flex;
   flex-flow: column-reverse;
+  align-items: flex-start;
 
   @include breakpoint('lg') {
     flex-flow: wrap;
@@ -11,12 +14,15 @@
 
   &__imagen {
     width: 100%;
-    text-align: right;
+    text-align: center;
     padding: 0 20px;
 
     img {
       margin-top: 24px;
+      max-width: 400px;
+      height: auto;
     }
+
     @include breakpoint('lg') {
       width: 40%;
     }
