@@ -1,0 +1,57 @@
+.content-special-kit {
+  background-image: var(--fondo-sk);
+  background-size: cover;
+  background-position: right;
+}
+
+.group-tarjetas {
+  display: grid;
+  justify-content: center;
+}
+
+.tarjeta-producto:last-child {
+  margin-bottom: 30px;
+}
+
+.titulo-sk {
+  font-family: var(--font-playfair-display);
+  font-weight: 600;
+  font-size: 2.2rem;
+  text-align: center;
+  letter-spacing: -0.01em;
+  color: #21295c;
+  line-height: 3rem;
+  margin: 0 1.6rem;
+  padding-top: 3rem;
+}
+
+.texto-sk {
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #21295c;
+  line-height: 2.5rem;
+  margin: 0 1.6rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@include breakpoint('lg') {
+  .titulo-sk {
+    font-size: 2.4rem;
+    line-height: 3.6rem;
+  }
+
+  .texto-sk {
+    line-height: 2.3rem;
+    width: inherit;
+    margin: 0 16%;
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+  }
+
+  .group-tarjetas {
+    display: flex;
+    margin: 0 7rem;
+  }
+}
