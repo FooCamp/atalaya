@@ -89,12 +89,12 @@
         height: 5.6rem;
       }
     }
+  }
 
-    img {
-      @include breakpoint('lg') {
-        width: auto;
-        height: auto;
-      }
+  img {
+    @include breakpoint('lg') {
+      width: auto;
+      height: auto;
     }
   }
 
@@ -107,6 +107,8 @@
     @include breakpoint('lg') {
       top: 8rem;
       left: 0;
+      height: auto;
+      width: 24%;
     }
   }
 
@@ -120,8 +122,10 @@
     object-position: left;
 
     @include breakpoint('lg') {
-      right: 0;
+      right: 16%;
       top: 0;
+      height: auto;
+      width: 14%;
     }
   }
 
@@ -135,6 +139,8 @@
     @include breakpoint('lg') {
       bottom: 0;
       right: 0;
+      height: auto;
+      width: 17%;
     }
   }
 }
