@@ -1,0 +1,87 @@
+.experience {
+  @include container-desktop;
+}
+
+.experience-container {
+  margin: 40px 16px;
+  display: flex;
+  flex-flow: column-reverse;
+  align-items: flex-start;
+
+  @include breakpoint('lg') {
+    flex-flow: wrap;
+  }
+
+  &__imagen {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+
+    img {
+      margin-top: 24px;
+      max-width: 400px;
+      height: auto;
+    }
+
+    @include breakpoint('lg') {
+      width: 40%;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    width: 100%;
+
+    @include breakpoint('lg') {
+      width: 60%;
+      padding: 20px 15px;
+    }
+
+    h4 {
+      font-family: var(--font-playfair-display);
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-align: left;
+      color: var(--space-blue);
+
+      @include breakpoint('lg') {
+        font-size: 32px;
+        line-height: 48px;
+      }
+    }
+  }
+
+  &__text__proceeds {
+    list-style-type: none;
+  }
+
+  &__text__module {
+    background: var(--alice-blue);
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: var(--space-blue);
+    padding: 12px 24px;
+    margin: 27px 0;
+
+    h5 {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+  }
+
+  &__text__purchase {
+    background: var(--melon);
+    border-radius: 24px;
+    font-size: 16px;
+    padding: 8px 24px;
+  }
+}

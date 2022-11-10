@@ -1,6 +1,8 @@
 .header {
+  @include container-desktop;
+
   display: flex;
-  margin: 2.1rem 1.6rem 0;
+  margin: 2.1rem auto 0;
   padding-bottom: 1.7rem;
   justify-content: space-between;
   align-items: center;
@@ -83,7 +85,7 @@
 
 @include breakpoint('lg') {
   .header {
-    margin: 1.6rem 6rem 0;
+    margin: 1.6rem auto 0;
     padding-bottom: 2.4rem;
     position: relative;
     justify-content: center;

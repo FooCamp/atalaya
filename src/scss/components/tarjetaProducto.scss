@@ -1,6 +1,6 @@
 .tarjeta-producto {
   min-width: 32.8rem;
-  max-width: 58rem;
+  max-width: 42.4rem;
   color: var(--space-blue);
   display: flex;
   flex-direction: column;
@@ -21,9 +21,9 @@
 
   &__imagen {
     min-width: 32.8rem;
-    max-width: 58rem;
+    max-width: 42.4rem;
     min-height: 32.8rem;
-    max-height: 58rem;
+    max-height: 42.4rem;
     aspect-ratio: 1 / 1;
     border-radius: 50% 50% 0 0;
     object-fit: cover;
@@ -37,39 +37,15 @@
     line-height: 3rem;
   }
 
-  .precio-producto {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.1rem;
-    background-color: var(--alice-blue);
-    padding: 1.6rem 0;
+  &__precio {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 3.6rem;
+  }
 
-    > * {
-      margin: 0;
-    }
-
-    &__label {
-      font-size: 1.6rem;
-      font-weight: 400;
-      line-height: 2.4rem;
-    }
-
-    &__label::after {
-      content: ':';
-    }
-
-    &__precio {
-      font-size: 2.4rem;
-      font-weight: 600;
-      line-height: 3.6rem;
-    }
-
-    // &__precio::before {
-    //   content: '$';
-    //   margin-right: 1.1rem;
-    // }
+  &__precio::before {
+    content: '$';
+    margin-right: 1.1rem;
   }
 }
 
