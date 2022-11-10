@@ -1,6 +1,7 @@
 .galeria-producto {
   min-width: 32.8rem;
   max-width: 58rem;
+  color: var(--space-blue);
 
   .swiper {
     min-height: 32.8rem;
@@ -56,6 +57,7 @@
     max-width: 58rem;
     max-height: 58rem;
     aspect-ratio: 1/1;
+    padding: 0;
   }
 
   .precio-producto {
@@ -85,11 +87,6 @@
       font-size: 2.4rem;
       font-weight: 600;
       line-height: 3.6rem;
-    }
-
-    &__precio::before {
-      content: '$';
-      margin-right: 1.1rem;
     }
   }
 }
