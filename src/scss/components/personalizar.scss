@@ -1,0 +1,163 @@
+::placeholder {
+  color: var(--purple);
+}
+
+.contenedorInformacion {
+  padding: 3%;
+  color: var(--space-blue);
+  font-size: 1.6rem;
+  font-family: var(--font-worksans);
+  font-weight: 400;
+}
+
+.tituloVelaPersonalizada {
+  font-family: var(--font-playfair-display);
+  font-weight: 500;
+  font-size: 2.2rem;
+  margin-bottom: 1.8rem;
+}
+
+.coloresTitulo {
+  margin-top: 2.1rem;
+}
+
+.tamanoTitulo {
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tamanos {
+  width: 100%;
+  border-radius: 1.2rem;
+  padding: 0.8rem;
+  border-color: var(--purple);
+  color: var(--purple);
+  margin-bottom: 1.5rem;
+  outline: none;
+}
+
+.tamanos :focus {
+  outline: none;
+}
+
+.contenedorIntencion {
+  margin-top: 3rem;
+}
+
+.intencion {
+  width: 100%;
+  border-radius: 1.2rem;
+  padding: 0.8rem;
+  border-color: var(--purple);
+  color: var(--purple);
+  outline: none;
+}
+
+.intencion :focus {
+  outline: none;
+}
+
+.intencionPersonalizada {
+  width: 100%;
+  padding: 0 0 1.2rem;
+  margin-top: 3rem;
+  border: none;
+  border-bottom: 1px solid var(--pale-purple);
+  color: var(--purple);
+  outline: none;
+}
+
+.intencionPersonalizada :focus {
+  outline: none;
+}
+
+.mensajeCanalizadoRadio {
+  display: none;
+}
+
+.checkboxMensajeCanalizado {
+  position: relative;
+  margin-bottom: 48px;
+  margin-top: 48px;
+  padding: 5px 0 5px 58px;
+  display: block;
+}
+
+.mensajeCanalizadoRadio + i {
+  border: 1.7011px solid var(--space-blue);
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  left: 0;
+  top: -5px;
+}
+
+.mensajeCanalizadoRadio + i::before {
+  content: '';
+  display: block;
+  height: 2.6rem;
+  width: 2.6rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.6rem;
+  background: var(--purple);
+}
+
+.mensajeCanalizadoRadio:checked + i::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.regaloTitulo {
+  display: none;
+}
+
+.checkboxRegalo {
+  position: relative;
+  padding-left: 1.3em;
+}
+
+.checkboxRegalo::before {
+  content: '';
+  border: 1px solid var(--space-blue);
+  width: 0.8em;
+  height: 0.8em;
+  position: absolute;
+  left: 0;
+}
+
+.regaloTitulo:checked + .checkboxRegalo::before {
+  content: '\f00c';
+}
+
+.datos__Nombre {
+  border: none;
+  border-bottom: 1px solid var(--pale-purple);
+  width: 100%;
+  padding: 0 0 1.2rem;
+  margin-top: 3rem;
+  outline: none;
+  color: var(--purple);
+}
+
+.datos__Fecha {
+  border: none;
+  border-bottom: 1px solid var(--pale-purple);
+  width: 100%;
+  padding: 0 0 1.2rem;
+  margin-top: 3rem;
+  outline: none;
+  color: var(--purple);
+}
+
+.datos__Cel {
+  border: none;
+  border-bottom: 1px solid var(--pale-purple);
+  width: 100%;
+  padding: 0 0 1.2rem;
+  margin-top: 3rem;
+  outline: none;
+  color: var(--purple);
+}

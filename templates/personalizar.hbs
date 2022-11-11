@@ -1,0 +1,58 @@
+<div class="contenedorInformacion">
+  <section>
+    <h2 class="tituloVelaPersonalizada">{{tituloVelaPersonalizada}}</h2>
+    <p class="descripcionTitulo">{{descripcionTitulo}}</p>
+
+    <h4 class="coloresTitulo">{{coloresTitulo}}</h4>
+    <form>
+      {{#each colores}}
+        <input type="radio" name="color" value="{{{this}}}" checked>{{{this}}}</input>
+      {{/each}}
+    </form>
+
+    <h4 class="tamanoTitulo">{{tamanoTitulo}}</h4>
+    <select class="tamanos" name="tamanos" id="tamanos">
+      {{#each tamanos}}
+        <option>{{{this}}}</option>
+    {{/each}}
+    </select>
+
+    <h4 class="intencionTitulo">{{intencionTitulo}}</h4>
+    <p class="intencionDescripcion">{{intencionDescripcion}}</p>
+    <div class="contenedorIntencion">
+      <select class="intencion" name="intencion" id="intencion">
+        {{#each intencionLista}}
+          <option>{{{this}}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <input class="intencionPersonalizada" type="text" placeholder="{{intencionPersonalizada}}">
+
+  </section>
+
+  <section>
+    <h4>{{mensajeTitulo}}</h4>
+    <p>{{mensajeDescripcion}}</p>
+
+
+
+    <label class="checkboxMensajeCanalizado">
+      <input class="mensajeCanalizadoRadio" type="radio" checked>{{mensajeCanalizadoTitulo}}</input>
+      <i></i>
+    </label>
+
+    <p>{{mensajeCanalizadoDescripcion}}</p>
+
+    <input class="regaloTitulo" type="checkbox" checked></input>
+    <label for="regaloTitulo" class="checkboxRegalo">{{regaloTitulo}}
+    </label>
+
+    <p>{{datosTitulo}}</p>
+    <div class="datos">
+      <input class="datos__Nombre" type="text" placeholder={{datosNombre}}>
+      <input class="datos__Fecha" type="text" placeholder="Fecha de Nacimiento" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}/">
+      <input class="datos__Cel" type="tel" placeholder={{datosCelular}} pattern="[0-9]{10}">
+    </div>
+    <a href={{enlaceComprar}} target="_blank">{{tituloComprar}}</a>
+  </section>
+</div>
