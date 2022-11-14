@@ -27,6 +27,7 @@
     @include breakpoint(lg) {
       display: flex;
       flex-direction: row;
+      justify-content: center;
     }
   }
 
@@ -35,6 +36,7 @@
     margin: 0 24px 24px;
     align-items: center;
     box-sizing: border-box;
+    max-width: 30%;
 
     & figure {
       width: 100%;
