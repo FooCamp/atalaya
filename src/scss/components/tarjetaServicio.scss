@@ -1,0 +1,85 @@
+.tarjeta-servicio {
+  position: relative;
+  width: calc(100% - 48px);
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+  margin-top: 33px;
+  border-bottom: 1px solid var(--pale-purple);
+  @include container-desktop;
+
+  @include breakpoint('lg') {
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    margin-top: 40px;
+  }
+
+  & img {
+    width: calc(100% - 48px);
+    height: auto;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+    @include breakpoint('lg') {
+      max-width: 30%;
+      margin: 0;
+    }
+  }
+
+  &--informacion {
+    width: 100%;
+    padding: 24px;
+    @include breakpoint('lg') {
+      max-width: 60%;
+      flex: 1;
+    }
+  }
+
+  &--titulo {
+    color: var(--space-blue);
+    font-family: var(--font-playfair-display);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 2rem;
+  }
+
+  &--descripcion {
+    color: var(--space-blue);
+    margin-bottom: 40px;
+  }
+
+  &--enlace {
+    text-align: center;
+    line-height: 24px;
+    background: var(--melon);
+    border-radius: 24px;
+    font-size: 16px;
+    padding: 8px 24px;
+    width: fit-content;
+    margin: 0 auto;
+    color: var(--space-blue);
+
+    & svg {
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    &:visited {
+      color: var(--purple);
+    }
+  }
+}
+
+.alinear-izquierda {
+  @include breakpoint('lg') {
+    flex-direction: row;
+  }
+}
+
+.alinear-derecha {
+  @include breakpoint('lg') {
+    flex-direction: row-reverse;
+  }
+}
