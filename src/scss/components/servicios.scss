@@ -36,7 +36,9 @@
     margin: 0 24px 24px;
     align-items: center;
     box-sizing: border-box;
-    max-width: 30%;
+    @include breakpoint('lg') {
+      max-width: 30%;
+    }
 
     & figure {
       width: 100%;
@@ -59,7 +61,7 @@
         color: var(--space-blue);
         margin: 24px 0;
 
-        @include breakpoint(lg) {
+        @include breakpoint('lg') {
           font-size: 3.2rem;
           line-height: 4.8rem;
         }
