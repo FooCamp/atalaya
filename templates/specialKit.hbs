@@ -1,0 +1,13 @@
+<section style="--fondo-sk: url({{assetSrc background}})" class="content-special-kit">
+  <h2 class="titulo-sk">{{{title}}}</h2>
+  <div class="texto-sk">
+    <p>{{{richText detalle}}}</p>
+  </div>
+  <div class="group-tarjetas">
+
+    {{#each tarjetasProduct}}
+      {{{module this}}}
+    {{/each}}
+
+  </div>
+</section>
