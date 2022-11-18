@@ -19,21 +19,27 @@
   }
 
   &__fecha {
-    margin: 2.4rem 0 0;
+    margin: 2.4rem 0;
   }
 
   &__texto {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 2.4rem;
+
+    p {
+      margin: 0;
+    }
 
     img {
       width: 100%;
       max-width: 75.75rem;
       height: fit-content;
-      object-fit: contain;
-      margin: 1.6rem auto;
+      object-fit: cover;
+      margin: 0.8rem auto;
       border-radius: 2rem;
+      aspect-ratio: 16/9;
     }
   }
 }
@@ -46,6 +52,16 @@
       font-size: 2.4rem;
       font-weight: 600;
       line-height: 3.6rem;
+    }
+
+    &__fecha {
+      margin-bottom: 4rem;
+    }
+
+    &__texto {
+      img {
+        margin: 1.6rem auto;
+      }
     }
 
     p {

@@ -26,7 +26,8 @@ export function convertDate() {
     'Noviembre',
     'Diciembre',
   ]
-  const dateFormated =
-    meses[date.getMonth()] + ' ' + date.getDate() + ' - ' + date.getFullYear()
-  dateP[0].textContent = dateFormated
+
+  dateP[0].textContent = `${
+    meses[date.getMonth()]
+  } ${date.getDate()} - ${date.getFullYear()}`
 }
