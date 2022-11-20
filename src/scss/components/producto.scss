@@ -1,10 +1,11 @@
 .producto {
   position: relative;
+  @include container-desktop;
 
   &__separador {
     border-top: 1px solid var(--pale-purple);
     border-bottom: 1px solid var(--pale-purple);
-    width: 90%;
+    width: 100%;
     margin: auto;
     margin-top: 40px;
 
@@ -29,11 +30,13 @@
       width: 100%;
 
       img {
-        width: 80%;
+        width: 30%;
         margin: 20px auto;
 
         @include breakpoint('lg') {
-          width: 524px;
+          max-width: 30%;
+          min-width: 524px;
+          height: auto;
         }
       }
     }
@@ -89,10 +92,11 @@
   flex-flow: column-reverse;
   padding-top: 3%;
   padding-bottom: 20px;
+  background-size: cover;
 
   @include breakpoint('lg') {
     flex-direction: row-reverse;
-    width: 90%;
+    width: 100%;
   }
 }
 
@@ -100,10 +104,11 @@
   background-image: var(--fondo-dos);
   flex-flow: column-reverse;
   background-position: center;
-  background-size: contain;
   background-repeat: repeat-x;
+  background-size: cover;
+
   @include breakpoint('lg') {
     flex-direction: row;
-    width: 90%;
+    width: 100%;
   }
 }
