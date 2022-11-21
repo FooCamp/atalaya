@@ -18,9 +18,11 @@
   & img {
     width: calc(100% - 48px);
     height: auto;
+    max-width: 30%;
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
+
     @include breakpoint('lg') {
       max-width: 30%;
       margin: 0;
