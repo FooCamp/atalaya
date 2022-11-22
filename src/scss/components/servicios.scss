@@ -1,7 +1,9 @@
 .servicios {
+  background-image: var(--fondo-servicios);
+  background-size: cover;
+  background-position: right;
   position: relative;
   padding: 40px 0 48px;
-  background-color: var(--baby-blue);
   display: flex;
   flex-direction: column;
   @include container-desktop;
@@ -12,31 +14,45 @@
   }
 
   &--descripcion {
+    position: relative;
     color: var(--space-blue);
     text-align: center;
-    border-top: solid 1px var(--pale-purple);
-    border-bottom: solid 1px var(--pale-purple);
     width: calc(100% - 2rem);
     box-sizing: border-box;
     display: block;
-    margin: 0 1rem 40px;
-    padding: 1rem;
-  }
+    margin: 0 1rem 3rem;
+    padding: 0;
 
-  &--tarjetas {
-    @include breakpoint(lg) {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
+    &::after {
+      content: '';
+      border-bottom: solid 1px var(--pale-purple);
+      width: calc(100% - 96px);
+      position: absolute;
+      margin: auto 0;
+      text-align: center;
+      vertical-align: middle;
+      left: 48px;
+      bottom: -35px;
+      @include breakpoint('lg') {
+        bottom: -10px;
+      }
+    }
+
+    @include breakpoint('lg') {
+      padding: 0.5rem 20rem 3rem;
     }
   }
 
   &--tarjeta {
+    max-width: 129rem;
     width: calc(100% - 48px);
     margin: 0 24px 24px;
     align-items: center;
     box-sizing: border-box;
-    @include breakpoint('lg') {
+    @include breakpoint('md') {
+      max-width: 129rem;
+    }
+    @include breakpoint('sm') {
       max-width: 30%;
     }
 
