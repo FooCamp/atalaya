@@ -43,6 +43,21 @@
     }
   }
 
+  &--tarjetas {
+    &.page-servicios {
+      display: block;
+    }
+
+    &.page-home {
+      @include breakpoint('md') {
+        display: flex;
+      }
+      @include breakpoint('sm') {
+        display: block;
+      }
+    }
+  }
+
   &--tarjeta {
     max-width: 129rem;
     width: calc(100% - 48px);
@@ -65,7 +80,6 @@
 
       & img {
         width: 100%;
-        max-width: min(30%, 400px);
         height: auto;
         display: block;
 
@@ -77,15 +91,15 @@
       & figcaption {
         text-align: center;
         font-family: var(--font-playfair-display);
-        font-size: 2.2rem;
-        font-weight: 500;
-        line-height: 3.4rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.25rem;
         color: var(--space-blue);
         margin: 24px 0;
 
         @include breakpoint('lg') {
-          font-size: 3.2rem;
-          line-height: 4.8rem;
+          font-size: 1.25rem;
+          line-height: 1.25rem;
         }
       }
 
@@ -99,10 +113,6 @@
         width: fit-content;
         margin: 0 auto;
         color: var(--space-blue);
-
-        &:visited {
-          color: var(--purple);
-        }
       }
     }
   }

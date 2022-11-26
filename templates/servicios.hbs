@@ -1,7 +1,7 @@
 <section style="--fondo-servicios: url({{assetSrc background}})" class="servicios">
 	<h2 class="servicios--titulo heading-2">{{titulo}}</h2>
 	<p class="servicios--descripcion body">{{descripcion}}</p>
-	<div class="servicios--tarjetas">
+	<div class="servicios--tarjetas {{seccion}}">
 		{{#each card}}
 			<div class="servicios--tarjeta">{{{module this}}}</div>
 		{{/each}}
