@@ -3,7 +3,7 @@
 		<img src='{{assetSrc imagenRedSocial}}' class="icono-red-social"/>
 	</a>
 	{{else}}
-	<a href={{vinculoEnlace}} target='_self' class="enlace">
+	<a href={{vinculoEnlace}} target={{#if enlaceInterno}}'_self'{{else}}'_blank'{{/if}} class="enlace">
 		{{textoEnlace}}
 	</a>
 {{/if}}
