@@ -1,0 +1,7 @@
+<section class="blog">
+  <h1 class="blog__titulo">{{titulo}}</h1>
+  <p class="blog__fecha">{{ fechaDePublicacion }}</p>
+  {{#each texto}}
+    {{{module this}}}
+  {{/each}}
+</section>

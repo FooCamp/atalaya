@@ -1,0 +1,116 @@
+.producto {
+  position: relative;
+  @include container-desktop;
+
+  &__separador {
+    border-top: 1px solid var(--pale-purple);
+    border-bottom: 1px solid var(--pale-purple);
+    width: 100%;
+    margin: auto;
+    margin-top: 40px;
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: var(--space-blue);
+      font-family: var(--font-worksans);
+    }
+  }
+
+  &__container {
+    padding: 15px;
+    margin: auto;
+    display: flex;
+    @include breakpoint('lg') {
+      flex-flow: wrap;
+    }
+
+    &__imagen {
+      text-align: center;
+      width: 100%;
+
+      img {
+        width: 30%;
+        margin: 20px auto;
+
+        @include breakpoint('lg') {
+          max-width: 30%;
+          min-width: 524px;
+          height: auto;
+        }
+      }
+    }
+
+    &__text {
+      margin: auto;
+      @include breakpoint('lg') {
+        width: 50%;
+        padding: 0 3%;
+      }
+
+      h4 {
+        font-family: var(--font-playfair-display);
+        line-height: 1.1;
+        font-size: 48px;
+        max-width: 446px;
+        color: var(--space-blue);
+        margin-bottom: 35px;
+      }
+
+      &__parrafo {
+        color: var(--space-blue);
+        max-width: 446px;
+        font-size: 16px;
+        line-height: 1.2;
+        margin: 40px 0;
+        font-family: var(--font-worksans);
+      }
+
+      &__purchase {
+        background: var(--melon);
+        border-radius: 24px;
+        font-size: 16px;
+        padding: 8px 24px;
+      }
+    }
+  }
+}
+
+.producto--text1 {
+  @include breakpoint('lg') {
+    top: 60px;
+  }
+}
+
+.producto--text2 {
+  @include breakpoint('lg') {
+    bottom: 346px;
+  }
+}
+
+.producto--card1 {
+  background-image: var(--fondo-uno);
+  flex-flow: column-reverse;
+  padding-top: 3%;
+  padding-bottom: 20px;
+  background-size: cover;
+
+  @include breakpoint('lg') {
+    flex-direction: row-reverse;
+    width: 100%;
+  }
+}
+
+.producto--card2 {
+  background-image: var(--fondo-dos);
+  flex-flow: column-reverse;
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: cover;
+
+  @include breakpoint('lg') {
+    flex-direction: row;
+    width: 100%;
+  }
+}

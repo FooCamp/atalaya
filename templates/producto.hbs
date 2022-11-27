@@ -1,0 +1,29 @@
+<section id="producto" class="producto">
+  <div style="--fondo-uno: url({{assetSrc primerFondo}})" class="producto__container producto--card1">
+    <div class=" producto__container__imagen">
+			<img src='{{assetSrc firstimagen}}' alt='{{assetTitle firstimagen}}'>
+    </div>
+      <div class="producto__container__text producto--text1 ">
+          <h4>{{firsttitle}}</h4>
+          <p class="producto__container__text__parrafo">
+            {{introduccion}}
+          </p>
+          <a class="producto__container__text__purchase" href={{enlace}}>{{textoEnlace}}</a>
+      </div>
+  </div>
+  <div class="producto__separador" >
+    <p>{{textoSeparador}}</p>
+  </div>
+	<div  style="--fondo-dos: url({{assetSrc segundoFondo}}) " class="producto__container producto--card2">
+		<div class="producto__container__imagen">
+			<img src='{{assetSrc segundaimagen }}' alt='{{assetTitle segundaimagen}}'>
+		</div>
+		<div class="producto__container__text producto--text2">
+				<h4>{{segundoTitulo}}</h4>
+				<p class="producto__container__text__parrafo">
+					{{introduccion2}}
+				</p>
+				<a class="producto__container__text__purchase" href={{segundoEnlace}}>{{textoSegundoEnlace}}</a>
+		</div>
+	</div>
+</section>

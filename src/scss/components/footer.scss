@@ -1,4 +1,6 @@
 .footer {
+  @include container-desktop;
+
   background-color: var(--space-blue);
   color: var(--white);
   padding: 56px 16px;
