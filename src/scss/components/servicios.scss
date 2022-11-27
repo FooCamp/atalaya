@@ -70,9 +70,6 @@
       @include breakpoint('lg') {
         display: flex;
       }
-      @include breakpoint('sm') {
-        display: block;
-      }
     }
   }
 
