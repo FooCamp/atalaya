@@ -3,6 +3,8 @@
 }
 
 .contenedorInformacion {
+  @include container-desktop;
+
   padding: 3%;
   color: var(--space-blue);
   font-size: 1.6rem;
@@ -50,6 +52,59 @@
 
 .tamanos :focus {
   outline: none;
+}
+
+.label-colores-group {
+  display: flex;
+}
+
+.label-colores {
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+  width: 40px;
+  height: 40px;
+
+  & + .label-colores {
+    margin-left: 1em;
+  }
+
+  & input[type='radio'] {
+    // hiddes the default radio element
+    appearance: none;
+    background-color: white;
+    margin: 0;
+
+    // custom styles
+    font: inherit;
+    color: currentcolor;
+    width: 40px;
+    height: 40px;
+    border: 0.15em solid black;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+
+    &::before {
+      content: '';
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 2em currentcolor;
+    }
+
+    &:checked::before {
+      transform: scale(1);
+    }
+
+    // &:focus {
+    // 	outline: max(2px, 0.15em) solid currentColor;
+    // 	outline-offset: max(2px, 0.15em);
+    // }
+  }
 }
 
 .contenedorIntencion {
