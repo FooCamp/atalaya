@@ -1,0 +1,310 @@
+::placeholder {
+  color: var(--purple);
+}
+
+.contenedorInformacion {
+  @include container-desktop;
+
+  padding: 3%;
+  color: var(--space-blue);
+  font-size: 1.6rem;
+  font-family: var(--font-worksans);
+  font-weight: 400;
+  line-height: 2.4rem;
+  @include breakpoint('lg') {
+    max-width: 50%;
+    line-height: 3.6rem;
+    padding-bottom: 0%;
+  }
+}
+
+.tituloVelaPersonalizada {
+  font-family: var(--font-playfair-display);
+  font-weight: 500;
+  font-size: 2.2rem;
+  margin-bottom: 1.8rem;
+  @include breakpoint('lg') {
+    font-weight: 600;
+  }
+}
+
+.coloresTitulo {
+  margin-top: 2.1rem;
+}
+
+.tamanoTitulo {
+  padding-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tamanos {
+  width: 100%;
+  border-radius: 1.2rem;
+  padding: 0.8rem;
+  border-color: var(--purple);
+  color: var(--purple);
+  margin-bottom: 1.5rem;
+  outline: none;
+  @include breakpoint('lg') {
+    max-width: 90%;
+  }
+}
+
+.tamanos :focus {
+  outline: none;
+}
+
+.label-colores-group {
+  display: flex;
+}
+
+.label-colores {
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+  width: 40px;
+  height: 40px;
+
+  & + .label-colores {
+    margin-left: 1em;
+  }
+
+  & input[type='radio'] {
+    // hiddes the default radio element
+    appearance: none;
+    background-color: white;
+    margin: 0;
+
+    // custom styles
+    font: inherit;
+    color: currentcolor;
+    width: 40px;
+    height: 40px;
+    border: 0.15em solid black;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+
+    &::before {
+      content: '';
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      transform: scale(0);
+      transition: 120ms transform ease-in-out;
+      box-shadow: inset 1em 2em currentcolor;
+    }
+
+    &:checked::before {
+      transform: scale(1);
+    }
+
+    // &:focus {
+    // 	outline: max(2px, 0.15em) solid currentColor;
+    // 	outline-offset: max(2px, 0.15em);
+    // }
+  }
+}
+
+.contenedorIntencion {
+  margin-top: 3rem;
+}
+
+.intencion {
+  width: 100%;
+  border-radius: 1.2rem;
+  padding: 0.8rem;
+  border-color: var(--purple);
+  color: var(--purple);
+  outline: none;
+  @include breakpoint('lg') {
+    max-width: 90%;
+  }
+}
+
+.intencion :focus {
+  outline: none;
+}
+
+.intencionPersonalizada {
+  width: 100%;
+  padding: 0 0 1.2rem;
+  margin-top: 3rem;
+  border: none;
+  border-bottom: 1px solid var(--pale-purple);
+  color: var(--purple);
+  outline: none;
+  @include breakpoint('lg') {
+    max-width: 90%;
+  }
+}
+
+.intencionPersonalizada :focus {
+  outline: none;
+}
+
+.mensajeCanalizadoRadio {
+  display: none;
+}
+
+.checkboxMensajeCanalizado {
+  position: relative;
+  margin-bottom: 48px;
+  margin-top: 48px;
+  padding: 5px 0 5px 58px;
+  display: block;
+}
+
+.mensajeCanalizadoRadio + i {
+  border: 1.7011px solid var(--space-blue);
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  left: 0;
+  top: -5px;
+}
+
+.mensajeCanalizadoRadio + i::before {
+  content: '';
+  display: block;
+  height: 2.6rem;
+  width: 2.6rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.6rem;
+  background: var(--purple);
+}
+
+.mensajeCanalizadoRadio:checked + i::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.regaloTitulo {
+  display: none;
+}
+
+.checkboxRegalo {
+  position: relative;
+  padding-left: 1.3em;
+  font-weight: 600;
+}
+
+.checkboxRegalo::before {
+  content: '';
+  border: 1px solid var(--space-blue);
+  width: 0.8em;
+  height: 0.8em;
+  position: absolute;
+  left: 0;
+}
+
+.regaloTitulo:checked + .checkboxRegalo::before {
+  content: '\f00c';
+}
+
+.datos {
+  @include breakpoint('lg') {
+    max-width: 90%;
+  }
+}
+
+.datos__Nombre {
+  border: none;
+  border-bottom: 1px solid var(--pale-purple);
+  width: 100%;
+  padding: 0 0 1.2rem;
+  margin-top: 3rem;
+  outline: none;
+  color: var(--purple);
+}
+
+.datos__Fecha {
+  border: none;
+  border-bottom: 1px solid var(--pale-purple);
+  width: 100%;
+  padding: 0 0 1.2rem;
+  margin-top: 3rem;
+  outline: none;
+  color: var(--purple);
+}
+
+.datos__Cel {
+  border: none;
+  border-bottom: 1px solid var(--pale-purple);
+  width: 100%;
+  padding: 0 0 1.2rem;
+  margin-top: 3rem;
+  margin-bottom: 2.2rem;
+  outline: none;
+  color: var(--purple);
+}
+
+.comprar {
+  width: 100%;
+  height: 8.4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--alice-blue);
+  color: var(--space-blue);
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-family: var(--font-worksans);
+  font-weight: 400;
+  @include breakpoint('lg') {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 3%;
+  }
+}
+
+.comprar__Precio {
+  margin: 0;
+  @include breakpoint('lg') {
+    display: none;
+  }
+}
+
+.comprar__Titulo {
+  width: 9.5rem;
+  height: 2.4rem;
+  margin: 0;
+}
+
+.comprar__Valor {
+  font-weight: 600;
+  font-size: 2.4rem;
+  width: 10.4rem;
+  height: 3.6rem;
+  margin: 0;
+}
+
+.comprar__cta {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.8rem 2.4rem;
+  gap: 0.8rem;
+  background-color: var(--melon);
+  border-radius: 2.4rem;
+  width: 14.1rem;
+  height: 4rem;
+}
+
+.comprar__cta--wa {
+  color: var(--space-blue);
+  width: 1.44rem;
+  height: 1.44rem;
+}
+
+.comprar__cta--text {
+  color: var(--space-blue);
+  font-weight: 600;
+}

@@ -2,6 +2,8 @@
   min-width: 32.8rem;
   max-width: 58rem;
   color: var(--space-blue);
+  padding: 32px 16px 40px;
+  box-sizing: border-box;
 
   .swiper {
     min-height: 32.8rem;
@@ -62,12 +64,16 @@
 
   .precio-producto {
     width: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     gap: 1.1rem;
     background-color: var(--alice-blue);
     padding: 1.6rem 0;
+
+    @include breakpoint('lg') {
+      display: flex;
+    }
 
     > * {
       margin: 0;
