@@ -1,9 +1,12 @@
 .servicios {
+  background-image: var(--fondo-servicios);
+  background-size: cover;
+  background-position: center center;
   position: relative;
-  padding: 40px 0 48px;
-  background-color: var(--baby-blue);
+  padding: 40px 16px 48px;
   display: flex;
   flex-direction: column;
+  background-color: var(--baby-blue);
   @include container-desktop;
 
   &--titulo {
@@ -12,22 +15,61 @@
   }
 
   &--descripcion {
+    position: relative;
     color: var(--space-blue);
     text-align: center;
-    border-top: solid 1px var(--pale-purple);
-    border-bottom: solid 1px var(--pale-purple);
-    width: calc(100% - 2rem);
+    width: 100%;
     box-sizing: border-box;
     display: block;
-    margin: 0 1rem 40px;
-    padding: 1rem;
+    padding: 16px 0;
+
+    &::before {
+      content: '';
+      border-bottom: solid 1px var(--pale-purple);
+      width: 100%;
+      position: absolute;
+      margin: auto 0;
+      text-align: center;
+      vertical-align: middle;
+      left: 0;
+      top: 0;
+      right: 0;
+    }
+
+    &::after {
+      content: '';
+      border-bottom: solid 1px var(--pale-purple);
+      width: 100%;
+      position: absolute;
+      margin: auto 0;
+      text-align: center;
+      vertical-align: middle;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+
+    @include breakpoint('lg') {
+      padding: 16px 0;
+    }
   }
 
   &--tarjetas {
-    @include breakpoint(lg) {
-      display: flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include breakpoint('lg') {
       flex-direction: row;
-      justify-content: center;
+    }
+
+    &.page-servicios {
+      display: block;
+    }
+
+    &.page-home {
+      @include breakpoint('lg') {
+        display: flex;
+      }
     }
   }
 
@@ -36,9 +78,7 @@
     margin: 0 24px 24px;
     align-items: center;
     box-sizing: border-box;
-    @include breakpoint('lg') {
-      max-width: 30%;
-    }
+    max-width: max(40%, 300px);
 
     & figure {
       width: 100%;
@@ -49,27 +89,27 @@
 
       & img {
         width: 100%;
-        max-width: min(30%, 400px);
         height: auto;
         display: block;
 
         @include breakpoint('lg') {
-          max-width: 90%;
+          width: 100%;
+          max-width: 400px;
         }
       }
 
       & figcaption {
         text-align: center;
         font-family: var(--font-playfair-display);
-        font-size: 2.2rem;
-        font-weight: 500;
-        line-height: 3.4rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        line-height: 1.25rem;
         color: var(--space-blue);
         margin: 24px 0;
 
         @include breakpoint('lg') {
-          font-size: 3.2rem;
-          line-height: 4.8rem;
+          font-size: 1.25rem;
+          line-height: 1.25rem;
         }
       }
 
@@ -83,10 +123,6 @@
         width: fit-content;
         margin: 0 auto;
         color: var(--space-blue);
-
-        &:visited {
-          color: var(--purple);
-        }
       }
     }
   }

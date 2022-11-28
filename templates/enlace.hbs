@@ -1,7 +1,9 @@
 {{#if redSocial}}
-	<a href={{vinculoEnlace}} target='_blank' alt='{{assetTitle imagenRedSocial}}'><img src='{{assetSrc imagenRedSocial}}' class="icono-red-social"/></a>
+	<a href={{vinculoEnlace}} target='_blank' alt='{{assetTitle imagenRedSocial}}'>
+		<img src='{{assetSrc imagenRedSocial}}' class="icono-red-social"/>
+	</a>
 	{{else}}
-	<a href={{vinculoEnlace}} target='_self' class="enlace">
+	<a href={{vinculoEnlace}} target={{#if enlaceInterno}}'_self'{{else}}'_blank'{{/if}} class="enlace">
 		{{textoEnlace}}
 	</a>
 {{/if}}

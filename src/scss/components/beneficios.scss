@@ -19,7 +19,7 @@
 
     img {
       margin-top: 24px;
-      max-width: min(30%, 400px);
+      max-width: max(40%, 300px);
       height: auto;
 
       @include breakpoint('lg') {

@@ -14,6 +14,7 @@
       line-height: 24px;
       text-align: center;
       color: var(--space-blue);
+      font-family: var(--font-worksans);
     }
   }
 
@@ -62,7 +63,8 @@
         max-width: 446px;
         font-size: 16px;
         line-height: 1.2;
-        margin-bottom: 35px;
+        margin: 40px 0;
+        font-family: var(--font-worksans);
       }
 
       &__purchase {
