@@ -11,23 +11,26 @@ export const utils = {
 
 export function convertDate() {
   const dateP = document.getElementsByClassName('blog__fecha')
-  const date = new Date(dateP[0].textContent)
-  const meses = [
-    'Enero',
-    'Febrero',
-    'Marzo',
-    'Abril',
-    'Mayo',
-    'Junio',
-    'Julio',
-    'Agosto',
-    'Septiembre',
-    'Octubre',
-    'Noviembre',
-    'Diciembre',
-  ]
 
-  dateP[0].textContent = `${
-    meses[date.getMonth()]
-  } ${date.getDate()} - ${date.getFullYear()}`
+  if (dateP.length > 0) {
+    const date = new Date(dateP[0].textContent)
+    const meses = [
+      'Enero',
+      'Febrero',
+      'Marzo',
+      'Abril',
+      'Mayo',
+      'Junio',
+      'Julio',
+      'Agosto',
+      'Septiembre',
+      'Octubre',
+      'Noviembre',
+      'Diciembre',
+    ]
+
+    dateP[0].textContent = `${
+      meses[date.getMonth()]
+    } ${date.getDate()} - ${date.getFullYear()}`
+  }
 }

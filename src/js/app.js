@@ -12,13 +12,21 @@ import { utils } from './utils'
 import { convertDate } from './utils'
 // Import galeriaProducto.js
 import { galeria } from './galeriaProducto'
-header()
-galeria()
-convertDate()
+// import handler form
+import { personalizar } from './personalizar'
 
-if (document.getElementsByClassName('precio-producto__precio')) {
-  var precios = document.getElementsByClassName('precio-producto__precio')
-  for (var i = 0; i < precios.length; i++) {
-    precios[i].textContent = utils.convertPesos(precios[i])
+// execute components on page load
+
+window.addEventListener('load', () => {
+  header()
+  galeria()
+  personalizar()
+  convertDate()
+
+  const precios = document.getElementsByClassName('precio-producto__precio')
+  if (precios.length > 0) {
+    for (var i = 0; i < precios.length; i++) {
+      precios[i].textContent = utils.convertPesos(precios[i])
+    }
   }
-}
+})
