@@ -30,6 +30,145 @@
   margin-top: 2.1rem;
 }
 
+.colores {
+  position: relative;
+  padding-bottom: 3.2rem;
+}
+
+.mensajeCanalizadoRadio + i::before {
+  content: '';
+  display: block;
+  height: 2.6rem;
+  width: 2.6rem;
+  border-radius: 100%;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.6rem;
+  background: var(--purple);
+}
+
+.color_purple,
+.color_blue,
+.color_mint,
+.color_pink,
+.color_red,
+.color_yellow {
+  display: none;
+}
+
+.color_blue + i,
+.color_mint + i,
+.color_purple + i,
+.color_pink + i,
+.color_red + i,
+.color_yellow + i {
+  box-sizing: content-box;
+  border: 1.7px solid var(--space-blue);
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  left: 0;
+  top: -5px;
+}
+
+.color_mint + i {
+  left: 5.2rem;
+}
+
+.color_purple + i {
+  left: 10.4rem;
+}
+
+.color_pink + i {
+  left: 15.6rem;
+}
+
+.color_red + i {
+  left: 20.8rem;
+}
+
+.color_yellow + i {
+  left: 26rem;
+}
+
+.color_blue + label::before,
+.color_mint + label::before,
+.color_purple + i::before,
+.color_pink + i::before,
+.color_red + i::before,
+.color_yellow + i::before {
+  content: '';
+  display: block;
+  height: 2.6rem;
+  width: 2.6rem;
+  border-radius: 100%;
+
+  // position: absolute;
+  top: 0.7rem;
+  left: 0.7rem;
+}
+
+.color_blue + label::before {
+  background: var(--space-blue);
+}
+
+.color_mint + label::before {
+  background-color: var(--atalaya-mint);
+}
+
+.color_purple + i::before {
+  background-color: var(--purple);
+}
+
+.color_pink + i::before {
+  background-color: var(--melon);
+}
+
+.color_red + i::before {
+  background-color: var(--vivid-tangerine);
+}
+
+.color_yellow + i::before {
+  background-color: var(--jasmine);
+}
+
+.color_blue:checked + label::before,
+.color_mint:checked + label::before,
+.color_purple:checked + label::before,
+.color_pink:checked + label::before,
+.color_red:checked + label::before,
+.color_yellow:checked + label::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.color_blue:checked + label::after {
+  content: '';
+  width: 12px;
+  height: 6px;
+  border: 4px solid #0fbf12;
+  float: left;
+  margin-left: 1.95em;
+  border-right: 0;
+  border-top: 0;
+  margin-top: 1em;
+  transform: rotate(-55deg);
+}
+
+.color_mint:checked + label::after {
+  content: '';
+  width: 12px;
+  height: 6px;
+  border: 4px solid #0fbf12;
+  float: left;
+  margin-left: 1.95em;
+  border-right: 0;
+  border-top: 0;
+  margin-top: 1em;
+  transform: rotate(-55deg);
+}
+
 .tamanoTitulo {
   padding-top: 1rem;
   margin-bottom: 1.5rem;
@@ -99,6 +238,7 @@
   margin-top: 48px;
   padding: 5px 0 5px 58px;
   display: block;
+  font-weight: 600;
 }
 
 .mensajeCanalizadoRadio + i {
@@ -109,18 +249,6 @@
   border-radius: 100%;
   left: 0;
   top: -5px;
-}
-
-.mensajeCanalizadoRadio + i::before {
-  content: '';
-  display: block;
-  height: 2.6rem;
-  width: 2.6rem;
-  border-radius: 100%;
-  position: absolute;
-  top: 0.5rem;
-  left: 0.6rem;
-  background: var(--purple);
 }
 
 .mensajeCanalizadoRadio:checked + i::before {
@@ -201,6 +329,8 @@
   line-height: 2.4rem;
   font-family: var(--font-worksans);
   font-weight: 400;
+  position: sticky;
+  bottom: 0;
   @include breakpoint('lg') {
     background-color: transparent;
     display: flex;

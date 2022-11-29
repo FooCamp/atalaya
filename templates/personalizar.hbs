@@ -4,9 +4,12 @@
     <p class="descripcionTitulo">{{descripcionTitulo}}</p>
 
     <h4 class="coloresTitulo">{{coloresTitulo}}</h4>
-    <form>
+    <form class="colores">
       {{#each colores}}
-        <input type="radio" name="color" value="{{{this}}}" checked>{{{this}}}</input>
+      <input class="color_{{{this}}}" type="radio" name="color" value="{{{this}}}"></input>
+      <label for="color_{{{this}}}">
+      </label>
+      <i></i>
       {{/each}}
     </form>
 
