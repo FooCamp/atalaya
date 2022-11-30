@@ -1,13 +1,14 @@
 .servicios {
-  background-image: var(--fondo-servicios);
-  background-size: cover;
-  background-position: center center;
   position: relative;
   padding: 40px 16px 48px;
   display: flex;
   flex-direction: column;
-  background-color: var(--baby-blue);
+  background: linear-gradient(var(--pastel-pink) 0%, var(--white) 100%);
   @include container-desktop;
+
+  @include breakpoint('lg') {
+    flex-direction: column;
+  }
 
   &--titulo {
     color: var(--space-blue);
@@ -59,7 +60,7 @@
     flex-direction: column;
     align-items: center;
     @include breakpoint('lg') {
-      flex-direction: row;
+      flex-direction: column;
     }
 
     &.page-servicios {
@@ -69,16 +70,22 @@
     &.page-home {
       @include breakpoint('lg') {
         display: flex;
+        flex-direction: row;
       }
     }
   }
 
   &--tarjeta {
-    width: calc(100% - 48px);
-    margin: 0 24px 24px;
+    width: 100%;
+    margin: 0 0 24px;
     align-items: center;
     box-sizing: border-box;
-    max-width: max(40%, 300px);
+    max-width: max(40%, 320px);
+
+    @include breakpoint('lg') {
+      width: 100%;
+      max-width: 100%;
+    }
 
     & figure {
       width: 100%;
