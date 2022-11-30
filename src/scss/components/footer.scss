@@ -5,14 +5,14 @@
   color: var(--white);
   padding: 56px 16px;
   width: 100%;
-  @include breakpoint('md') {
+  @include breakpoint('lg') {
     padding: 48px 60px;
   }
 
   .grupo-enlaces-footer {
     display: flex;
     flex-direction: column;
-    @include breakpoint('md') {
+    @include breakpoint('lg') {
       flex-direction: row;
     }
 

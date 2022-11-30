@@ -18,7 +18,7 @@
   & img {
     width: calc(100% - 48px);
     height: auto;
-    max-width: 30%;
+    max-width: 360px;
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
@@ -50,6 +50,15 @@
   &--descripcion {
     color: var(--space-blue);
     margin-bottom: 40px;
+  }
+
+  &--disclaimer {
+    color: var(--purple);
+    margin-bottom: 5rem;
+  }
+
+  &--descripcion-servicio {
+    color: var(--space-blue);
   }
 
   &--enlace {
