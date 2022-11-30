@@ -43,10 +43,6 @@
 }
 
 @include breakpoint('lg') {
-  p {
-    font-size: 180%;
-  }
-
   .tarjeta-producto {
     &__enlace {
       gap: 2.4rem;

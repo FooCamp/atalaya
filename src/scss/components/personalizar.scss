@@ -25,7 +25,17 @@
   margin-bottom: 1.8rem;
   @include breakpoint('lg') {
     font-weight: 600;
+    font-size: 24px;
   }
+}
+
+.descripcionTitulo,
+.intencionDescripcion,
+.tipoMensajeLabel,
+.labelMensajeCanalizado,
+.labelDatosPersona {
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .coloresTitulo {
@@ -145,14 +155,15 @@
 }
 
 .mensajeCanalizadoRadio {
-  display: none;
+  // display: none;
+  margin-right: 12px;
 }
 
 .checkboxMensajeCanalizado {
   position: relative;
   margin-bottom: 48px;
   margin-top: 48px;
-  padding: 5px 0 5px 58px;
+  padding: 5px 0;
   display: block;
 }
 
@@ -184,17 +195,19 @@
 }
 
 .regaloTitulo {
-  display: none;
+  // display: none;
+  margin-right: 12px;
 }
 
 .checkboxRegalo {
   position: relative;
-  padding-left: 1.3em;
+
+  // padding-left: 1.3em;
   font-weight: 600;
 }
 
 .checkboxRegalo::before {
-  content: '';
+  // content: '';
   border: 1px solid var(--space-blue);
   width: 0.8em;
   height: 0.8em;
@@ -203,7 +216,7 @@
 }
 
 .regaloTitulo:checked + .checkboxRegalo::before {
-  content: '\f00c';
+  // content: '\f00c';
 }
 
 .datos {
@@ -296,6 +309,12 @@
   border-radius: 2.4rem;
   width: 14.1rem;
   height: 4rem;
+  appearance: none;
+  border: none;
+
+  @include breakpoint('lg') {
+    margin-left: 44%;
+  }
 }
 
 .comprar__cta--wa {
