@@ -1,14 +1,27 @@
 .galeria-producto {
-  min-width: 32.8rem;
-  max-width: 58rem;
+  width: 100%;
+  max-width: 360px;
   color: var(--space-blue);
   padding: 32px 16px 40px;
   box-sizing: border-box;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+
+  @include breakpoint('lg') {
+    max-width: 35%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    position: sticky;
+    top: 0;
+  }
 
   .swiper {
     min-height: 32.8rem;
     max-height: 58rem;
     display: flex;
+    width: 100%;
 
     .swiper-button-next {
       right: 1.2rem;
@@ -54,10 +67,11 @@
   }
 
   .swiper .tarjeta-producto__imagen {
-    min-width: 32.8rem;
+    min-width: 280px;
     min-height: 32.8rem;
     max-width: 58rem;
     max-height: 58rem;
+    width: 100%;
     aspect-ratio: 1/1;
     padding: 0;
   }
@@ -96,3 +110,5 @@
     }
   }
 }
+
+// TODO MAKE THE IMAGE STICKY IN DESKTOP

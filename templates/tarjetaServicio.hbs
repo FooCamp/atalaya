@@ -6,7 +6,12 @@
 	<img src="{{assetSrc imagen}}" alt="{{assetTitle imagen}}" />
 	<div class="tarjeta-servicio--informacion">
 		<h3 class="tarjeta-servicio--titulo">{{titulo}}</h3>
-		<p class="tarjeta-servicio--descripcion body">{{descripcion}}</p>
+		{{#if descripcionServicio}}
+			<div class="tarjeta-servicio--descripcion-servicio body">
+				{{{richText descripcionServicio}}}
+			</div>
+		{{/if}}
+		<p class="tarjeta-servicio--disclaimer body">{{disclaimer}}</p>
 		<a class="tarjeta-servicio--enlace" href="{{enlace}}" target={{#if enlaceInterno}}'_self'{{else}}'_blank'{{/if}}>
 			<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path d="M0.800049 15.217L1.8359 11.3629C1.08368 9.99698 0.802361 8.42227 1.03527 6.8812C1.26818 5.34013 2.0024 3.91817 3.12487 2.83426C4.24735 1.75036 5.69584 1.0646 7.24731 0.882595C8.79879 0.700586 10.3672 1.03241 11.7111 1.82698C13.055 2.62155 14.0998 3.8348 14.6847 5.27993C15.2696 6.72506 15.3621 8.32193 14.948 9.82466C14.5339 11.3274 13.6361 12.6527 12.393 13.5964C11.1498 14.5402 9.63013 15.0501 8.06797 15.0476C6.88315 15.0494 5.71635 14.7583 4.67174 14.2005L0.800049 15.217ZM4.87551 12.7351L5.11324 12.8791C6.20906 13.5278 7.4892 13.7966 8.75415 13.6437C10.0191 13.4907 11.1978 12.9246 12.1065 12.0335C13.0153 11.1425 13.6031 9.97652 13.7782 8.71739C13.9534 7.45826 13.7061 6.17668 13.075 5.07239C12.4438 3.96809 11.4642 3.10311 10.2888 2.61226C9.11346 2.1214 7.80834 2.03225 6.57686 2.35868C5.34539 2.68511 4.25676 3.4088 3.48061 4.41695C2.70446 5.42511 2.2844 6.6611 2.2859 7.93231C2.28498 8.98835 2.57899 10.0238 3.13495 10.9224L3.27928 11.1681L2.70193 13.3196L4.87551 12.7351Z" fill="#212966"/>

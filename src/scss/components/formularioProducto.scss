@@ -1,0 +1,11 @@
+.componentes-formulario {
+  @include container-desktop;
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint('lg') {
+    flex-flow: row wrap;
+  }
+}

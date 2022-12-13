@@ -31,7 +31,8 @@
       width: 100%;
 
       img {
-        width: 30%;
+        width: 90%;
+        max-width: 360px;
         margin: 20px auto;
 
         @include breakpoint('lg') {
