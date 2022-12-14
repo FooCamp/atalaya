@@ -1,0 +1,47 @@
+.separador {
+  @include container-desktop;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.4rem;
+  padding: 0 1.6rem;
+  margin: 3.2rem auto;
+  color: var(--space-blue);
+  background-color: var(--fondo-separador);
+
+  &__linea {
+    border-bottom: 0.1rem var(--pale-purple) solid;
+  }
+
+  &__titulo {
+    text-align: center;
+    margin: 0;
+    font-family: var(--font-playfair-display);
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 600;
+  }
+
+  &__descripcion {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 400;
+    width: 100%;
+    max-width: 87rem;
+  }
+}
+
+@include breakpoint('lg') {
+  .separador {
+    margin: 4rem auto;
+    padding: 0;
+
+    &__titulo {
+      font-size: 2.4rem;
+      line-height: 3.6rem;
+    }
+  }
+}
