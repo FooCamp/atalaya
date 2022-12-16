@@ -1,14 +1,17 @@
 .header {
   @include container-desktop;
 
-  display: flex;
-  margin: 2.1rem auto 0;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-bottom: 1.7rem;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--pale-pink);
+  margin: 0 auto;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    margin: 2.1rem 1.6rem 0;
+    padding-bottom: 1.7rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--pale-pink);
+  }
 
   &__logo {
     width: 12rem;
@@ -87,10 +90,14 @@
 
 @include breakpoint('lg') {
   .header {
-    margin: 1.6rem auto 0;
-    padding-bottom: 2.4rem;
-    position: relative;
-    justify-content: center;
+    padding: 0 6rem;
+
+    &__container {
+      margin: 2.3rem auto 0;
+      padding-bottom: 2.4rem;
+      position: relative;
+      justify-content: center;
+    }
 
     .burger-menu {
       display: none;

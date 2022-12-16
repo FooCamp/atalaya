@@ -1,0 +1,18 @@
+<div class="separador"
+  {{#if colorDeFondo}}
+  style="--fondo-separador: var({{colorDeFondo}});"
+  {{/if}}
+  >
+  {{#if lineaSuperior}}
+  <span class="separador__linea"></span>
+  {{/if}}
+  {{#if titulo}}
+  <h1 class="separador__titulo">{{titulo}}</h1>
+  {{/if}}
+  {{#if descripcion}}
+  <p class="separador__descripcion">{{descripcion}}</p>
+  {{/if}}
+  {{#if lineaInferior}}
+  <span class="separador__linea"></span>
+  {{/if}}
+</div>

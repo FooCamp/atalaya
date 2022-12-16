@@ -22,20 +22,7 @@
     width: 100%;
     box-sizing: border-box;
     display: block;
-    padding: 16px 0;
-
-    &::before {
-      content: '';
-      border-bottom: solid 1px var(--pale-purple);
-      width: 100%;
-      position: absolute;
-      margin: auto 0;
-      text-align: center;
-      vertical-align: middle;
-      left: 0;
-      top: 0;
-      right: 0;
-    }
+    padding: 0 1.75rem;
 
     &::after {
       content: '';
@@ -46,12 +33,12 @@
       text-align: center;
       vertical-align: middle;
       left: 0;
-      bottom: 0;
+      bottom: -2.6rem;
       right: 0;
     }
 
     @include breakpoint('lg') {
-      padding: 16px 0;
+      padding: 0 17rem;
     }
   }
 
