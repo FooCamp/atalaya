@@ -1,8 +1,9 @@
 <div class="entrada-blog">
   <div class="entrada-blog__texto">
-    {{{module blogPost}}}
-    {{log this}}
-      <a href="{{enlace}}" class="entrada-blog__boton">Leer</a>
+    {{#each blogPost}}
+      {{{module this}}}
+    {{/each}}
+    <a href="{{enlace}}" class="entrada-blog__boton">Leer</a>
   </div>
   <div class="entrada-blog__imagen">
     <img src="{{assetSrc imagen}}" alt="">
