@@ -11,19 +11,25 @@ const convertirPrecioANumero = (precio) => {
     const numeroPrecio = valorSinCurrency.replace('.', '')
     return Number(numeroPrecio)
   } else {
-    return 40000
+    return precio
   }
 }
 
 const recuperarPrecio = () => {
   const precioGaleria = document.querySelector('.precio-producto__precio')
-  return convertirPrecioANumero(precioGaleria.innerText)
+  if (precioGaleria) {
+    return convertirPrecioANumero(precioGaleria.dataset.precio)
+  }
 }
 
 const actualizarPrecio = () => {
   const precio = recuperarPrecio()
   const total = document.querySelector('.precio__Total')
-  return (total.innerText = precio)
+  if (total) {
+    return (total.innerText = precio)
+  } else {
+    return
+  }
 }
 
 const reemplazarGuiones = (texto) => {
@@ -31,43 +37,53 @@ const reemplazarGuiones = (texto) => {
 }
 
 // oculta o muestra los campos del formulario en caso de ser regalo
-inputRegalo.addEventListener('change', () => {
-  const check = document.getElementById('regalo')
-  if (check.checked) {
-    datosPersona.classList.add('visible')
-    datosRegalo.classList.add('visible')
-    datosPersona.classList.remove('not-visible')
-    datosRegalo.classList.remove('not-visible')
-    // hace los campos requeridos si son visibles
-    document.querySelector('.datos__Nombre').setAttribute('required', true)
-    document.querySelector('.datos__Fecha').setAttribute('required', true)
-    document.querySelector('.datos__Cel').setAttribute('required', true)
-  } else {
-    datosPersona.classList.add('not-visible')
-    datosRegalo.classList.add('not-visible')
-    datosPersona.classList.remove('visible')
-    datosRegalo.classList.remove('visible')
-    document.querySelector('.datos__Nombre').removeAttribute('required')
-    document.querySelector('.datos__Fecha').removeAttribute('required')
-    document.querySelector('.datos__Cel').removeAttribute('required')
-  }
-})
+if (inputRegalo) {
+  inputRegalo.addEventListener('change', () => {
+    const check = document.getElementById('regalo')
+    if (check.checked) {
+      datosPersona.classList.add('visible')
+      datosRegalo.classList.add('visible')
+      datosPersona.classList.remove('not-visible')
+      datosRegalo.classList.remove('not-visible')
+      // hace los campos requeridos si son visibles
+      document.querySelector('.datos__Nombre').setAttribute('required', true)
+      document.querySelector('.datos__Fecha').setAttribute('required', true)
+      document.querySelector('.datos__Cel').setAttribute('required', true)
+    } else {
+      datosPersona.classList.add('not-visible')
+      datosRegalo.classList.add('not-visible')
+      datosPersona.classList.remove('visible')
+      datosRegalo.classList.remove('visible')
+      document.querySelector('.datos__Nombre').removeAttribute('required')
+      document.querySelector('.datos__Fecha').removeAttribute('required')
+      document.querySelector('.datos__Cel').removeAttribute('required')
+    }
+  })
+}
 
 // agrega el valor del mensaje canalizado al envío
-inputMensajecanalizado.addEventListener('change', () => {
-  const check = document.getElementById('canalizado')
-  const total = document.querySelector('.precio__Total')
-  const precio = recuperarPrecio()
+if (inputMensajecanalizado) {
+  inputMensajecanalizado.addEventListener('change', () => {
+    const check = document.getElementById('canalizado')
+    const total = document.querySelector('.precio__Total')
+    const precio = recuperarPrecio()
 
-  const precioInicial = convertirPrecioANumero(precio)
+    const precioInicial = convertirPrecioANumero(precio)
 
-  if (check.checked) {
-    const precioActualizado = Number(precioInicial) + 10000
-    return (total.innerText = Number(precioActualizado))
-  } else {
-    return (total.innerText = Number(precioInicial))
-  }
-})
+    if (check.checked) {
+      const precioActualizado = Number(precioInicial) + 10000
+      document.querySelector(
+        '.precio-producto__precio'
+      ).innerText = `$ ${precioActualizado}`
+      total.innerText = Number(precioActualizado)
+    } else {
+      document.querySelector(
+        '.precio-producto__precio'
+      ).innerText = `$ ${precioInicial}`
+      total.innerText = Number(precioInicial)
+    }
+  })
+}
 
 export const personalizar = () => {
   function handleSubmit(event) {
