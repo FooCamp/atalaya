@@ -11,14 +11,14 @@ const convertirPrecioANumero = (precio) => {
     const numeroPrecio = valorSinCurrency.replace('.', '')
     return Number(numeroPrecio)
   } else {
-    return 40000
+    return precio
   }
 }
 
 const recuperarPrecio = () => {
   const precioGaleria = document.querySelector('.precio-producto__precio')
   if (precioGaleria) {
-    return convertirPrecioANumero(precioGaleria.innerText)
+    return convertirPrecioANumero(precioGaleria.dataset.precio)
   }
 }
 
@@ -72,9 +72,15 @@ if (inputMensajecanalizado) {
 
     if (check.checked) {
       const precioActualizado = Number(precioInicial) + 10000
-      return (total.innerText = Number(precioActualizado))
+      document.querySelector(
+        '.precio-producto__precio'
+      ).innerText = `$ ${precioActualizado}`
+      total.innerText = Number(precioActualizado)
     } else {
-      return (total.innerText = Number(precioInicial))
+      document.querySelector(
+        '.precio-producto__precio'
+      ).innerText = `$ ${precioInicial}`
+      total.innerText = Number(precioInicial)
     }
   })
 }
