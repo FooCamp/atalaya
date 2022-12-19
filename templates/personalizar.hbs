@@ -8,54 +8,54 @@
       <div class="label-colores-group">
         {{#each colores}}
         <label class="label-colores">
-          <input style="color: var({{this}})" type="radio" name="color" value="{{{this}}}" checked />
+          <input style="color: var({{this}})" type="radio" name="Color" value="{{{this}}}" checked />
         </label>
         {{/each}}
       </div>
 
       <h4 class="tamanoTitulo">{{tamanoTitulo}}</h4>
-      <select class="tamanos" name="tamanos" id="tamanos">
+      <select class="tamanos" name="Tamano" id="tamanos">
         {{#each tamanos}}
-        <option>{{{this}}}</option>
+          <option>{{{this}}}</option>
         {{/each}}
       </select>
 
       <h4 class="intencionTitulo">{{intencionTitulo}}</h4>
       <p class="intencionDescripcion">{{intencionDescripcion}}</p>
       <div class="contenedorIntencion">
-        <select class="intencion" name="intencion" id="intencion">
+        <select class="intencion" name="Intencion" id="intencion">
           {{#each intencionLista}}
           <option>{{{this}}}</option>
           {{/each}}
         </select>
       </div>
-      <input class="intencionPersonalizada" type="text" placeholder="{{intencionPersonalizada}}">
+      <input name="Intencion personalizada" class="intencionPersonalizada" type="text" placeholder="{{intencionPersonalizada}}">
 
       <h4>{{mensajeTitulo}}</h4>
       <p class="tipoMensajeLabel">{{mensajeDescripcion}}</p>
 
       <label class="checkboxMensajeCanalizado">
-        <input name="esUnRegalo" class="mensajeCanalizadoRadio" type="checkbox" value="false">{{mensajeCanalizadoTitulo}}</input>
+        <input name="Es un regalo" class="mensajeCanalizadoRadio" type="checkbox" id="canalizado">{{mensajeCanalizadoTitulo}}</input>
       </label>
 
       <p class="labelMensajeCanalizado">{{mensajeCanalizadoDescripcion}}</p>
 
       <label for="regaloTitulo" class="checkboxRegalo">
-        <input name="regaloPersonalizado" class="regaloTitulo" type="checkbox" value="false">{{regaloTitulo}}</input>
+        <input name="Regalo personalizado" class="regaloTitulo" type="checkbox" id="regalo">{{regaloTitulo}}</input>
       </label>
 
       <p class="labelDatosPersona not-visible">{{datosTitulo}}</p>
       <div class="datos not-visible">
-        <input name="nombre persona" class="datos__Nombre" type="text" placeholder={{datosNombre}}>
-        <input name="fecha envio" class="datos__Fecha" type="text" placeholder="Fecha de Nacimiento - 01/01/0001"
+        <input name="Nombre persona" class="datos__Nombre" type="text" placeholder={{datosNombre}}>
+        <input name="Fecha nacimiento" class="datos__Fecha" type="text" placeholder="Fecha de Nacimiento - 01/01/0001"
           pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}">
-        <input name="celular" class="datos__Cel" type="tel" placeholder={{datosCelular}} pattern="[0-9]{10}">
+        <input name="Celular" class="datos__Cel" type="tel" placeholder={{datosCelular}} pattern="[0-9]{10}">
       </div>
 
       <div class="comprar">
         <div class="comprar__Precio">
           <p class="comprar__Titulo">Precio total:</p>
-          <p class="comprar__Valor">$ 30.000</p>
+          <p class="comprar__Valor">$ <span class="precio__Total"></span></p>
         </div>
 
         <button type="submit" value="{{tituloComprar}}" class="comprar__cta">
